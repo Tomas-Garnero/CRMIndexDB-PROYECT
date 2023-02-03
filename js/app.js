@@ -1,7 +1,7 @@
 (function() {
 
     let DB;
-    
+
     document.addEventListener("DOMContentLoaded", () => {
         crearDB();
 
@@ -15,12 +15,12 @@
 
             crearDB.onsuccess = function() {
                 DB = crearDB.result; 
-                // console.log(DB);
+                console.log(DB);
             };
 
             crearDB.onupgradeneeded = function(e) {
                 const db = e.target.result;
-                // console.log(db);
+                console.log(db);
 
                 const objectStore = db.createObjectStore("crm", { keyPath: "id", autoIncrement: true });
 
